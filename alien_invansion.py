@@ -9,6 +9,8 @@ class AlienInvasion:
         pygame.init()
         self.screen = pygame.display.set_mode((1200,800))
         pygame.display.set_caption("Alien Invasion")
+        self.clock = pygame.time.Clock()
+
 
     def run_game(self):
         """Start the main loop for the game"""
@@ -19,11 +21,12 @@ class AlienInvasion:
                     sys.exit()
 
             #make the most recectly drawn screen visible
+            pygame.display.flip()
+            self.clock.tick(60)
 
 if __name__ == '__main__':
     #make a game instance, and run the game
     a1 = AlienInvasion()
     a1.run_game()
-
 
 
