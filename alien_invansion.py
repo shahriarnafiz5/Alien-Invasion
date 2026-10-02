@@ -40,6 +40,7 @@ class AlienInvasion:
             self._update_screen()
             self.clock.tick(60)
             self.bullets.update()
+            self._update_aliens()
 
            
             
@@ -134,6 +135,9 @@ class AlienInvasion:
         new_alien.rect.y = y_position
         self.aliens.add(new_alien)
 
+    def _update_aliens(self):
+        """Update the positions of all aliens in the fleet"""
+        self.aliens.update()
 
 
 
