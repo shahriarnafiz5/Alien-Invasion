@@ -135,9 +135,22 @@ class AlienInvasion:
         new_alien.rect.y = y_position
         self.aliens.add(new_alien)
 
+
+    
+
     def _update_aliens(self):
         """Update the positions of all aliens in the fleet"""
         self.aliens.update()
+
+
+    def _check_fleet_edges(self):
+        """Respond appropriately if any aliens have reached an edge"""
+        for alien in self.aliens.sprites():
+            if alien.check_edges():
+                self._change_fleet_direction()
+                break
+    
+    
 
 
 
