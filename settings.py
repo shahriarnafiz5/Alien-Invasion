@@ -13,7 +13,7 @@ class Settings:
         self.bullet_width = 3
         self.bullet_height = 15
         self.bullet_colour = (60,60,60)
-        self.bullet_allowed = 3
+        self.bullet_allowed = 10
 
         #Allien Settings...
         self.alien_speed = 1.0
